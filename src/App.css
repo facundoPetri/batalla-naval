@@ -1,38 +1,93 @@
-.App {
+body {
   text-align: center;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Roboto", sans-serif;
+  color: white;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  margin: 0 0 90px 0;
+  font-size: 25px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.name{
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: bolder;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+input, button {
+  font-size: 18px;
+  background-color: rgba(3, 97, 238, 0.5);
+  color: rgb(255, 255, 255);
+  margin: 5px;
+  border: none;
+  outline: none;
+}
+input {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 4px;
+}
+input:focus {
+  border: 2px solid white;
+}
+button {
+  padding: 8px 20px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+button:active {
+  background-color: white;
+  color: rgba(3, 97, 238, 1);
+}
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center
+}
+@media (max-width: 1110px) {
+  .game {
+    flex-direction: column;
+  }
+  .board {
+    margin: 35px 0;
+  }
+}
+.board {
+  display: flex;
+  flex-flow: row wrap;
+  height: 540px;
+  width: 540px;
+}
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.842);
+  margin: 1px;
+}
+.turn {
   color: white;
+  font-size: 40px;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: rgba(3, 97, 238, 0.5);
+  border: 1px solid black;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.has-ship{
+  background-color: aliceblue;
+  cursor: pointer;
 }
