@@ -1,7 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useRef } from "react";
 import Board from "./Board";
 import Player from "../factories/Player";
 import StartGame from "./StartGame";
+import GameFinished from "./GameFinished";
 
 const GameWindow = () => {
   const [newGame, setNewGame] = useState(false);
@@ -46,7 +48,6 @@ const GameWindow = () => {
       }
     }, 500);
     return () => clearTimeout(timer1);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPlayer]);
 
   // usar useRef para saltear el primer useeffect
@@ -67,7 +68,7 @@ const GameWindow = () => {
   }, [currentPlayer]);
   return (
     <div>
-      {gameWon && <>{gameWon}</>}
+      {gameWon && <GameFinished winner={gameWon} />}
       {!gameWon && !newGame && (
         <StartGame
           name={name}

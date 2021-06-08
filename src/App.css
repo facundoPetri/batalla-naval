@@ -15,8 +15,11 @@ body {
   color: white;
 }
 .header {
-  margin: 0 0 90px 0;
+  margin: 0 0 50px 0;
   font-size: 25px;
+}
+.header h1 {
+  margin: 0;
 }
 .name {
   text-transform: uppercase;
@@ -46,7 +49,7 @@ button {
 #name:focus {
   border: 2px solid white;
 }
-label{
+label {
   font-size: larger;
 }
 button {
@@ -101,10 +104,33 @@ button:active {
 .has-ship {
   background-color: aliceblue;
 }
-.is-shot {
-  background-color: red;
-}
 .cpu:hover {
   background-color: aliceblue;
   cursor: pointer;
+}
+.is-shot {
+  background-color: red;
+  cursor: not-allowed !important;
+}
+.footer {
+  height: 40px;
+  background-color: rgba(3, 97, 238, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-height: 870px) {
+  .footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+  }
+}
+.winner-text {
+  font-size: 30px;
+}
+.winner-text span {
+  font-weight: bold;
 }

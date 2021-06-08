@@ -1,5 +1,3 @@
-import React from "react";
-
 const StartGame = ({ name, handleChange, handleClick }) => {
   return (
     <form>
