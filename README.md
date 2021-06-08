@@ -1,4 +1,4 @@
-# Juego Batalla Naval
+# Juego Batalla Naval para The Odin Project
 
 [Demo](https://eribloo.github.io/battleship/)
 
@@ -11,7 +11,7 @@
 ## Instalacion y ejecución
 ```bash
 git clone https://github.com/facundoPetri/batalla-naval.git
-cd battleship
+cd batalla-naval
 npm install
 npm start
 ```
