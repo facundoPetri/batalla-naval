@@ -1,16 +1,35 @@
 import Cell from "./Cell";
 
-const Board = ({ board, playerName, init }) => {
-  init()
-  let drawBoard = board.map((row) =>
-    row.map((item, index) => (
-      <Cell name={playerName} hasShip={item.hasShip} isShot={item.isShot} key={index} />
-    ))
+const Board = ({ gameBoard, currentPlayer, switchPlayer, player }) => {
+  let i = 0;
+  const drawBoard = gameBoard.board.map((row, y) =>
+    row.map((item, x) => {
+      i++;
+      return (
+        <Cell
+          name={player}
+          currentPlayer={currentPlayer}
+          switchPlayer={switchPlayer}
+          hasShip={item.hasShip}
+          gameBoard={gameBoard}
+          coords={[x, y]}
+          key={i}
+        />
+      );
+    })
   );
+
+  // anular eventos al que no le toca el turno
+  const style = {
+    pointerEvents: "none",
+    backgroundColor: "rgba(255, 255, 255, 0.4)",
+  };
   return (
     <div>
-      <p className="name">{playerName}</p>
-      <div className="board">{drawBoard}</div>
+      <p className="name">{player}</p>
+      <div className="board" style={currentPlayer === player ? style : null}>
+        {drawBoard}
+      </div>
     </div>
   );
 };

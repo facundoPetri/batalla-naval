@@ -18,7 +18,7 @@ body {
   margin: 0 0 90px 0;
   font-size: 25px;
 }
-.name{
+.name {
   text-transform: uppercase;
   font-size: 19px;
   font-weight: bolder;
@@ -28,7 +28,8 @@ form {
   flex-direction: column;
   align-items: center;
 }
-input, button {
+input,
+button {
   font-size: 18px;
   background-color: rgba(3, 97, 238, 0.5);
   color: rgb(255, 255, 255);
@@ -36,13 +37,17 @@ input, button {
   border: none;
   outline: none;
 }
-input {
+#name {
   border: 2px solid black;
   border-radius: 10px;
   padding: 4px;
+  text-align: center;
 }
-input:focus {
+#name:focus {
   border: 2px solid white;
+}
+label{
+  font-size: larger;
 }
 button {
   padding: 8px 20px;
@@ -57,7 +62,7 @@ button:active {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center
+  align-items: center;
 }
 @media (max-width: 1110px) {
   .game {
@@ -72,12 +77,18 @@ button:active {
   flex-flow: row wrap;
   height: 540px;
   width: 540px;
+  background-color: rgba(3, 97, 238, 0.5);
 }
 .cell {
+  display: flex;
+  font-size: 40px;
+  font-weight: bold;
   width: 50px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.842);
   margin: 1px;
+  align-items: center;
+  justify-content: center;
 }
 .turn {
   color: white;
@@ -87,7 +98,13 @@ button:active {
   background-color: rgba(3, 97, 238, 0.5);
   border: 1px solid black;
 }
-.has-ship{
+.has-ship {
+  background-color: aliceblue;
+}
+.is-shot {
+  background-color: red;
+}
+.cpu:hover {
   background-color: aliceblue;
   cursor: pointer;
 }

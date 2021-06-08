@@ -1,25 +1,22 @@
-import Gameboard from "./Gameboard"
+import Gameboard from "./Gameboard";
 
 class Player {
   constructor(name, type = "human") {
     this.name = name;
     this.type = type;
     this.gameBoard = new Gameboard();
+    this.gameBoard.init();
   }
 
-  play(x, y, enemyBoard) {
-    enemyBoard.receiveAttack([x, y]);
-  }
-
-  autoplay(enemyBoard) {
+  autoplay(playerBoard) {
     let x = Math.floor(Math.random() * 10);
     let y = Math.floor(Math.random() * 10);
-    if (enemyBoard.board[y][x].isShot === true) {
-      this.autoplay();
+    if (playerBoard.board[y][x].isShot === true) {
+      this.autoplay(playerBoard);
     } else {
-      enemyBoard.receiveAttack([x, y]);
+      playerBoard.receiveAttack([x, y]);
     }
   }
 }
 
-export default Player
+export default Player;

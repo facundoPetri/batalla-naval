@@ -1,4 +1,4 @@
-import Ship from "./Ship"
+import Ship from "./Ship";
 
 class Gameboard {
   constructor() {
@@ -6,18 +6,19 @@ class Gameboard {
       .fill({ hasShip: false, isShot: false })
       .map((x) => Array(10).fill({ hasShip: false, isShot: false }));
     this.fleet = [
-      { ship: new Ship(1), coords: [] },
-      { ship: new Ship(1), coords: [] },
-      { ship: new Ship(2), coords: [] },
-      { ship: new Ship(2), coords: [] },
-      { ship: new Ship(3), coords: [] },
-      { ship: new Ship(3), coords: [] },
+      // { ship: new Ship(1), coords: [] },
+      // { ship: new Ship(1), coords: [] },
+      // { ship: new Ship(2), coords: [] },
+      // { ship: new Ship(2), coords: [] },
+      // { ship: new Ship(3), coords: [] },
+      // { ship: new Ship(3), coords: [] },
       { ship: new Ship(4), coords: [] },
     ];
   }
 
   receiveAttack(coord) {
     let [x, y] = coord;
+    if (this.board[y][x].isShot) return false;
     this.board[y][x] = { ...this.board[y][x], isShot: true };
     if (this.board[y][x].hasShip) {
       for (let i = 0; i < this.fleet.length; i++) {
