@@ -1,17 +1,17 @@
 import Ship from "./Ship";
 
 class Gameboard {
-  constructor() {
-    this.board = Array(10)
+  constructor(size = 10) {
+    this.board = Array(size)
       .fill({ hasShip: false, isShot: false })
-      .map((x) => Array(10).fill({ hasShip: false, isShot: false }));
+      .map((x) => Array(size).fill({ hasShip: false, isShot: false }));
     this.fleet = [
-      // { ship: new Ship(1), coords: [] },
-      // { ship: new Ship(1), coords: [] },
-      // { ship: new Ship(2), coords: [] },
-      // { ship: new Ship(2), coords: [] },
-      // { ship: new Ship(3), coords: [] },
-      // { ship: new Ship(3), coords: [] },
+      { ship: new Ship(1), coords: [] },
+      { ship: new Ship(1), coords: [] },
+      { ship: new Ship(2), coords: [] },
+      { ship: new Ship(2), coords: [] },
+      { ship: new Ship(3), coords: [] },
+      { ship: new Ship(3), coords: [] },
       { ship: new Ship(4), coords: [] },
     ];
   }
