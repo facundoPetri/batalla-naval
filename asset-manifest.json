@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/batalla-naval/static/css/main.84a5f8b1.chunk.css",
+    "main.js": "/batalla-naval/static/js/main.5669a383.chunk.js",
+    "main.js.map": "/batalla-naval/static/js/main.5669a383.chunk.js.map",
+    "runtime-main.js": "/batalla-naval/static/js/runtime-main.a51d5b71.js",
+    "runtime-main.js.map": "/batalla-naval/static/js/runtime-main.a51d5b71.js.map",
+    "static/js/2.fa100b8f.chunk.js": "/batalla-naval/static/js/2.fa100b8f.chunk.js",
+    "static/js/2.fa100b8f.chunk.js.map": "/batalla-naval/static/js/2.fa100b8f.chunk.js.map",
+    "index.html": "/batalla-naval/index.html",
+    "static/css/main.84a5f8b1.chunk.css.map": "/batalla-naval/static/css/main.84a5f8b1.chunk.css.map",
+    "static/js/2.fa100b8f.chunk.js.LICENSE.txt": "/batalla-naval/static/js/2.fa100b8f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a51d5b71.js",
+    "static/js/2.fa100b8f.chunk.js",
+    "static/css/main.84a5f8b1.chunk.css",
+    "static/js/main.5669a383.chunk.js"
+  ]
+}
