@@ -1,6 +1,6 @@
 # Juego Batalla Naval para The Odin Project
 
-[Demo](https://eribloo.github.io/battleship/)
+[Demo](https://facundopetri.github.io/batalla-naval/)
 
 ## Hecho con
 * HTML
